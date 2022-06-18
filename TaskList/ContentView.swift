@@ -27,10 +27,10 @@ struct ContentView: View {
       .navigationBarItems(
         leading: EditButton(),
         trailing: Button(action: {
-        self.modalIsPresented = true
-      }) {
-        Image(systemName: "plus")
-      })
+          self.modalIsPresented = true
+        }) {
+          Image(systemName: "plus")
+        })
     }
     .sheet(isPresented: $modalIsPresented) {
       NewTaskView(taskStore: taskStore)
