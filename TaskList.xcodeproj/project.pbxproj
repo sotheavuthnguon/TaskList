@@ -21,6 +21,7 @@
 		633CB6BB285D9E17005BA0B8 /* Task.Priority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633CB6BA285D9E17005BA0B8 /* Task.Priority.swift */; };
 		633CB6BD285D9E66005BA0B8 /* TaskStore.PrioritizedTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633CB6BC285D9E66005BA0B8 /* TaskStore.PrioritizedTasks.swift */; };
 		633CB6C1285DA25E005BA0B8 /* SectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633CB6C0285DA25E005BA0B8 /* SectionView.swift */; };
+		633CB6C3285DA9B1005BA0B8 /* Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633CB6C2285DA9B1005BA0B8 /* Binding.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		633CB6BA285D9E17005BA0B8 /* Task.Priority.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.Priority.swift; sourceTree = "<group>"; };
 		633CB6BC285D9E66005BA0B8 /* TaskStore.PrioritizedTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskStore.PrioritizedTasks.swift; sourceTree = "<group>"; };
 		633CB6C0285DA25E005BA0B8 /* SectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionView.swift; sourceTree = "<group>"; };
+		633CB6C2285DA9B1005BA0B8 /* Binding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Binding.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 			children = (
 				633CB6B6285D9B1D005BA0B8 /* ForEach.swift */,
 				633CB6B8285D9B4D005BA0B8 /* IndexedCollection.swift */,
+				633CB6C2285DA9B1005BA0B8 /* Binding.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 				633CB6B4285D98D1005BA0B8 /* TaskEditingView.swift in Sources */,
 				633CB6B0285D8B65005BA0B8 /* NewTaskView.swift in Sources */,
 				633CB6BD285D9E66005BA0B8 /* TaskStore.PrioritizedTasks.swift in Sources */,
+				633CB6C3285DA9B1005BA0B8 /* Binding.swift in Sources */,
 				633CB6AB285D84B0005BA0B8 /* Task.swift in Sources */,
 				633CB6C1285DA25E005BA0B8 /* SectionView.swift in Sources */,
 				633CB6AE285D8527005BA0B8 /* TaskStore.swift in Sources */,
