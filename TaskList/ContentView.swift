@@ -21,12 +21,17 @@ struct ContentView: View {
         ForEach(taskStore.tasks) { task in
           Text(task.name)
         }
+        .onMove { sourceIndices, destinationIndex in
+          taskStore.tasks.move(fromOffsets: sourceIndices, toOffset: destinationIndex)
+        }
         .onDelete { indexSet in
           taskStore.tasks.remove(atOffsets: indexSet)
         }
       }
       .navigationBarTitle("Tasks")
-      .navigationBarItems(trailing: Button(action: {
+      .navigationBarItems(
+        leading: EditButton(),
+        trailing: Button(action: {
         self.modalIsPresented = true
       }) {
         Image(systemName: "plus")
