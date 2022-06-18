@@ -14,14 +14,16 @@ struct SectionView: View {
   @Binding var prioritiedTasks: TaskStore.PrioritizedTasks
   
   var body: some View {
-    ForEach(prioritiedTasks.tasks) { index in
-      RowView(task: $prioritiedTasks.tasks[index])
-    }
-    .onMove { sourceIndices, destinationIndex in
-      prioritiedTasks.tasks.move(fromOffsets: sourceIndices, toOffset: destinationIndex)
-    }
-    .onDelete { indexSet in
-      prioritiedTasks.tasks.remove(atOffsets: indexSet)
+    Section(header: Text("\(prioritiedTasks.priority.rawValue.capitalized) Priority")) {
+      ForEach(prioritiedTasks.tasks) { index in
+        RowView(task: $prioritiedTasks.tasks[index])
+      }
+      .onMove { sourceIndices, destinationIndex in
+        prioritiedTasks.tasks.move(fromOffsets: sourceIndices, toOffset: destinationIndex)
+      }
+      .onDelete { indexSet in
+        prioritiedTasks.tasks.remove(atOffsets: indexSet)
+      }
     }
   }
 }

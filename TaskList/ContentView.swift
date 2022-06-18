@@ -22,6 +22,7 @@ struct ContentView: View {
           SectionView(prioritiedTasks: $taskStore.prioritizedTasks[index])
         }
       }
+      .listStyle(GroupedListStyle())
       .navigationBarTitle("Tasks")
       .navigationBarItems(
         leading: EditButton(),
