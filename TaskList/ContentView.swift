@@ -10,14 +10,32 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        Text("Hello, world!")
-            .padding()
+  
+  @ObservedObject var taskStore: TaskStore
+  @State var modalIsPresented = false
+  
+  var body: some View {
+    
+    NavigationView {
+      List(taskStore.tasks) { task in
+        Text(task.name)
+      }
+      .navigationBarTitle("Tasks")
+      .navigationBarItems(trailing: Button(action: {
+        self.modalIsPresented = true
+      }) {
+        Image(systemName: "plus")
+      })
     }
+    .sheet(isPresented: $modalIsPresented) {
+      NewTaskView(taskStore: taskStore)
+    }
+    
+  }
 }
 
 struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+  static var previews: some View {
+    ContentView(taskStore: TaskStore())
+  }
 }
